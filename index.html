@@ -14,19 +14,69 @@
     <!-- title -->
     <header class="row">
       <div class="col">
+        <h1> Chord Diagram <br>Geni</h1>
       </div>
     </header>
     <!-- chord selector/diagram -->
-    <div class="row">
+    <div class="row padbtm">
       <div class="col left">
         <div class="row">
+          <h2 class="padbtm center">Root Selector</h2>
+        </div>
+        <!-- Dropdown Menu -->
+        <div class='row rootSelector'>
+          <div class="dropdown col">
+            <button class="dropbtn btn  dropdown-toggle" type="button" id=' dropdownMenuButton' data-toggle='dropdown' aria-haspopup="true" aria-expanded='false'>
+              Root
+            </button>
+            <div id="myDropdown" class="dropdown-menu col visible rtPicker dropdown-content" aria-labelledby="dropdownMenuButton">
+              <a class="note dropdown-item" href="#C">C </a>
+              <a class="note dropdown-item" href="#C#">C#/Db</a>
+              <a class="note dropdown-item" href="#D">D</a>
+              <a class="note dropdown-item" href="#D#">D#/Eb</a>
+              <a class="note dropdown-item" href="#E">E</a>
+              <a class="note dropdown-item" href="#F">F</a>
+              <a class="note dropdown-item" href="#F#">F#/Gb</a>
+              <a class="note dropdown-item" href="#G">G</a>
+              <a class="note dropdown-item" href="#G#">G#/Ab</a>
+              <a class="note dropdown-item" href="#A">A</a>
+              <a class="note dropdown-item" href="#A#">A#/Bb</a>
+              <a class="note dropdown-item" href="#B">B</a>
+            </div>
+          </div>
+          <!-- Chord Root Display -->
+          <div class="rootDisplay col">
+            <div>
+              <h3 id='selectedChord'></h3>
+            </div>
+          </div>
         </div>
         <div class='row'>
-        </div>
-        <div class='row'>
+          <div class="col rtPicker">
+            <h2>Chord Type Selector</h2>
+            <ul class="list-inline ">
+              <li class="dropdown-item chord"> Major</li>
+              <li class="dropdown-item chord"> Minor</li>
+              <!-- <li class="list-inline-item align-middle">D</li>
+              <li class="list-inline-item align-middle">D#/ <br> Eb</li>
+              <li class="list-inline-item align-middle">E</li>
+              <li class="list-inline-item align-middle">F</li>
+              <li class="list-inline-item align-middle">F#/ <br>Gb</li>
+              <li class="list-inline-item align-middle">G</li>
+              <li class="list-inline-item align-middle">G#/ <br> Ab</li>
+              <li class="list-inline-item align-middle">A</li>
+              <li class="list-inline-item align-middle">A#/ <br>Bb</li>
+              <li class="list-inline-item align-middle">B</li> -->
+            </ul>
+          </div>
         </div>
       </div>
       <div class="col right">
+        <div class="row">
+          <h2 class="headline">Guitar O Chords</h2>
+
+        </div>
+
       </div>
     </div>
 
@@ -36,7 +86,9 @@
 
 
 
-
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 </body>
 
 </html>
