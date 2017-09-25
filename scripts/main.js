@@ -21,7 +21,7 @@ for (var i = 0; i < chordType.length; i++) {
     displaySelectedChord.innerText = selectedRoot + ' ' + event.target.innerText
     selectedChordType = event.target.innerText;
     console.log(selectedChordType);
-    majorChord(selectedRoot)
+    findIndexOfRoot(selectedRoot)
   })
 }
 
@@ -33,7 +33,7 @@ var alphabet = ['A', 'A#/Bb', 'B', 'C', 'C#/Db', 'D', 'D#/Eb', 'E', 'F',
 ]
 var indexOfRoot
 
-function majorChord(root) {
+function findIndexOfRoot(root) {
   indexOfRoot = alphabet.indexOf(root)
   console.log(indexOfRoot);
 
