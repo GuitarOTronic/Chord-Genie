@@ -23,8 +23,27 @@ h2{
   padding-top:1.6rem;
 
 }
+.goLeft{
+  display: flex;
+  justify-content: flex-start;
+}
+.goRight{
+  display: flex;
+  justify-content: flex-end;
+}
 .padbtm{
   padding-bottom: 1.5rem;
+}
+.padUp{
+  padding-top: 1.5rem;
+}
+.marginUp{
+  margin-top: 2rem;
+
+}
+ .rootDisplay p{
+  font-size: 1.4rem;
+  font-weight: 300;
 }
 .rootDisplay{
   /*display: flex;*/
@@ -32,16 +51,14 @@ h2{
   padding: 1rem;
   border: 1px solid black;
   margin-bottom: 1rem;
+  border-radius: 5px;
 }
-.rtPicker {
-  background: linear-gradient(to right,rgba(49, 66, 79, 1), rgba(49, 66, 79, .2));
-  /*background-color: rgba(49, 66, 79, 1);*/
-  border-radius:10px;
 
-}
-ul {
-  /*list-style: none;*/
-  /*min-width: 100%;*/
+
+.chord{
+
+    border: 1px solid #2d2d2d;
+    radius: 10px;
 }
 li {
   line-height: 1.5rem;
@@ -49,11 +66,11 @@ li {
   padding: .3rem;
   background: #fff;
   font-size:1rem;
+  border: 1px solid #2d2d2d;
+  border-radius: 5px;
 }
 
-.right{
-  margin-left: 2rem;
-}
+
 /******    Dropdown    ********/
 
 .dropdown-item{
@@ -78,3 +95,190 @@ li {
 }
 
 .dropdown a:hover {background-color: #f1f1f1}
+
+/*********  Chord Diagram   **********/
+
+
+
+.circle{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: red;
+  visibility:hidden;
+
+}
+.fretboard td{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    background: #78513c;
+    width: 40px;
+    height: 40px;
+}
+/********   notes on e  *******/
+#ef{
+  position: absolute;
+  right: -13px;
+  top: 100px;
+}
+#efs{
+  position: absolute;
+  right: -13px;
+  top: 140px;
+}
+#eg{
+  position: absolute;
+  right: -13px;
+  top: 178px;
+}
+#egs{
+  position: absolute;
+  right: -13px;
+  top: 218px;
+}
+#ea{
+  position: absolute;
+  right: -13px;
+  top: 258px;
+}
+/********   notes on B  *********/
+#bc{
+  position: absolute;
+  right: 26px;
+  top: 100px;
+}
+#bcs{
+  position: absolute;
+  right: 26px;
+  top: 140px;
+}
+#bd{
+  position: absolute;
+  right: 26px;
+  top: 178px;
+}
+#bds{
+  position: absolute;
+  right: 26px;
+  top: 218px;
+}
+#be{
+  position: absolute;
+  right: 26px;
+  top: 258px;
+}
+/********   notes on G *********/
+#ggs{
+  position: absolute;
+  right: 65px;
+  top: 100px;
+}
+#ga{
+  position: absolute;
+  right: 65px;
+  top: 140px;
+}
+#gas{
+  position: absolute;
+  right: 65px;
+  top: 178px;
+}
+#gb{
+  position: absolute;
+  right: 65px;
+  top: 218px;
+}
+#gc{
+  position: absolute;
+  right: 65px;
+  top: 258px;
+}
+/********   notes on D *********/
+
+#dds{
+  position: absolute;
+  right: 105px;
+  top: 100px;
+}
+#de{
+  position: absolute;
+  right: 105px;
+  top: 140px;
+}
+#df{
+  position: absolute;
+  right: 105px;
+  top: 178px;
+}
+#dfs{
+  position: absolute;
+  right: 105px;
+  top: 218px;
+}
+#dg{
+  position: absolute;
+  right: 105px;
+  top: 258px;
+}
+
+
+
+/********   notes on A *********/
+#aas{
+  position: absolute;
+  right: 145px;
+  top: 100px;
+}
+#ab{
+  position: absolute;
+  right: 145px;
+  top: 140px;
+}
+#ac{
+  position: absolute;
+  right: 145px;
+  top: 178px;
+}
+#acs{
+  position: absolute;
+  right: 145px;
+  top: 218px;
+}
+#ad{
+  position: absolute;
+  right: 145px;
+  top: 258px;
+}
+
+
+
+
+
+/********   notes on E *********/
+#e6f{
+  position: absolute;
+  right: 185px;
+  top: 100px;
+}
+#e6fs{
+  position: absolute;
+  right: 185px;
+  top: 140px;
+}
+#e6g{
+  position: absolute;
+  right: 185px;
+  top: 178px;
+}
+#e6gs{
+  position: absolute;
+  right: 185px;
+  top: 218px;
+}
+#e6a{
+  position: absolute;
+  right: 185px;
+  top: 258px;
+}
