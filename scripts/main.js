@@ -61,7 +61,7 @@ var minChord = document.getElementById('minor')
 var displayCT = document.getElementById('displayCT')
 minChord.addEventListener('click', function() {
   minorChord(alphabet)
-  displayCT.innerText = chordTones.join('-')
+  displayCT.innerText = chordTones.join('-').toUpperCase()
 
 })
 
@@ -77,9 +77,11 @@ function minorChord(alph) {
 //*************  Chord Tone Display Button  ********
 var lowerCaseCT = chordTones.join('')
 var noteCircle = document.getElementsByClassName('circle')
-
+var learned = document.getElementById('learned')
 var showChord = document.getElementById('showChord')
+
 showChord.addEventListener('click', function() {
+
   for (var i = 0; i < noteCircle.length; i++) {
     noteCircle[i].style.visibility = 'hidden'
   }
@@ -94,4 +96,27 @@ showChord.addEventListener('click', function() {
       }
     }
   }
+  // check to see if chords been added to local storage
+  var chord = displaySelectedChord.innerText
+  var storageLength = localStorage.length
+
+  localStorage.setItem(storageLength, chord)
+
+  //  learned.innerHTML = chord
+  // for (var i = 0; i < array.length; i++) {
+  //   array[i]
+  // }
+  // for (localStorage in chord) {
+  //   console.log(chord)
+  //   learned.innerHTML += chord
+  // }
+  for (let v = 0; v < storageLength; v++) {
+    if (!learned.innerHTML.includes(localStorage.getItem(v)))
+      learned.innerHTML += " " + localStorage.getItem(v)
+  }
+
+
 })
+//***** Chords you've learned so far**********
+
+// console.log(localStorage.getItem("learned")) console.log(localStorage.length);

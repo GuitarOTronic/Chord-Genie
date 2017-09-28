@@ -98,7 +98,9 @@ li {
 
 /*********  Chord Diagram   **********/
 
-
+.padUpper{
+  padding-top: 3rem;
+}
 
 .circle{
   position: absolute;
@@ -108,6 +110,7 @@ li {
   background-color: red;
   visibility:hidden;
 
+
 }
 .fretboard td{
     border-style: solid;
@@ -116,6 +119,42 @@ li {
     background: #78513c;
     width: 40px;
     height: 40px;
+}
+/********   open notes**********/
+.openNotes{
+
+  border:1px solid black;
+  background-color: #fff;
+}
+#ee{
+  position: absolute;
+  right: -13px;
+  top: 60px;
+}
+#bb{
+  position: absolute;
+  right: 26px;
+  top: 60px;
+}
+#gg{
+  position: absolute;
+  right: 65px;
+  top: 60px;
+}
+#dd{
+  position: absolute;
+  right: 105px;
+  top: 60px;
+}
+#aa{
+  position: absolute;
+  right: 145px;
+  top: 60px;
+}
+#e6e{
+  position: absolute;
+  right: 185px;
+  top: 60px;
 }
 /********   notes on e  *******/
 #ef{

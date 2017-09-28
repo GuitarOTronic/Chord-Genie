@@ -78,12 +78,21 @@
       <!-- Chord diagram  -->
       <div class="col ">
         <div class="row ">
-          <div class='center'>
+          <div class='center '>
             <h2> Chord Diagram</h2>
           </div>
         </div>
-        <div class="row padUp goRight">
+        <div class="row padUp goRight ">
+          <div class="openNotes">
+            <div class="circle e openNotes" id="ee"></div>
+            <div class="circle b openNotes" id="bb"></div>
+            <div class="circle g openNotes" id="gg"></div>
+            <div class="circle d openNotes" id="dd"></div>
+            <div class="circle a openNotes" id="aa"></div>
+            <div class="circle e openNotes" id="e6e"></div>
+          </div>
           <!-- Note Circles -->
+          <!-- ids are note names prefaced with the string name. s = sharp Low E has a 6 to differentiate it from high e.  -->
           <div>
             <!-- notes on e  -->
             <div class="circle f" id='ef'></div>
@@ -171,7 +180,10 @@
           </div>
         </div>
         <div class="row ">
-          <button class="marginUp center" id="showChord">Show Chord</button>
+          <button class="marginUp center" id="showChord">Generate Chord</button>
+        </div>
+        <div>
+          <p id="learned">dickle</p>
         </div>
       </div>
     </div>
