@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Chord Diagrams</title>
+  <title>Chord Genie</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/main.css">
   <link rel="shortcut icon" href="assets/guitar.png" />
@@ -16,17 +16,17 @@
       <!-- title -->
       <header class="row">
         <div class="col">
-          <h1>Chord Geni</h1>
+          <h1>Chord Genie</h1>
         </div>
       </header>
       <!-- chord selector/diagram -->
       <div class="row padbtm">
         <div class="col left">
           <div class="row">
-            <h2 class="padbtm center">Root Selector</h2>
+            <h2 class="padbtm ">Root Selector</h2>
           </div>
           <!-- Dropdown Menu -->
-          <div class='row rootSelector'>
+          <div class='row rootDisplay'>
             <div class="dropdown col">
               <button class="dropbtn btn  dropdown-toggle" type="button" id=' dropdownMenuButton' data-toggle='dropdown' aria-haspopup="true" aria-expanded='false'>
               Root
@@ -47,7 +47,7 @@
               </div>
             </div>
             <!-- Chord Root Display -->
-            <div class="rootDisplay col">
+            <div class=" col">
               <div>
                 <p id='selectedChord'></p>
               </div>
@@ -59,16 +59,7 @@
               <ul class="list-inline">
                 <li id='major' class="dropdown-item chord"> Major</li>
                 <li id='minor' class="dropdown-item chord"> Minor</li>
-                <!-- <li class="list-inline-item align-middle">D</li>
-              <li class="list-inline-item align-middle">D#/ <br> Eb</li>
-              <li class="list-inline-item align-middle">E</li>
-              <li class="list-inline-item align-middle">F</li>
-              <li class="list-inline-item align-middle">F#/ <br>Gb</li>
-              <li class="list-inline-item align-middle">G</li>
-              <li class="list-inline-item align-middle">G#/ <br> Ab</li>
-              <li class="list-inline-item align-middle">A</li>
-              <li class="list-inline-item align-middle">A#/ <br>Bb</li>
-              <li class="list-inline-item align-middle">B</li> -->
+
               </ul>
             </div>
           </div>
@@ -84,7 +75,8 @@
               <h2> Chord Diagram</h2>
             </div>
           </div>
-          <div class="row padUp goRight ">
+          <!-- Open Note Circles -->
+          <div class="row  goRight padUp">
             <div class="openNotes">
               <div class="circle e openNotes" id="ee"></div>
               <div class="circle b openNotes" id="bb"></div>
@@ -184,7 +176,7 @@
           <!-- Chords You Learned  -->
           <div class="col justify">
             <div class="marginUp rootDisplay">
-              <button class="" id="showChord">Generate Chord</button>
+              <button class="btn" id="showChord">Generate Chord</button>
             </div>
             <div class="rootDisplay">
               <h2>Chords You Learned</h2>
