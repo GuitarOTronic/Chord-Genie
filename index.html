@@ -6,58 +6,60 @@
   <title>Chord Diagrams</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="shortcut icon" href="assets/guitar.png" />
   <script defer src="scripts/main.js" charset="utf-8"></script>
 </head>
 
 <body>
-  <main class="container">
-    <!-- title -->
-    <header class="row">
-      <div class="col">
-        <h1> Cowboy-Chord <br>Geni</h1>
-      </div>
-    </header>
-    <!-- chord selector/diagram -->
-    <div class="row padbtm">
-      <div class="col left">
-        <div class="row">
-          <h2 class="padbtm center">Root Selector</h2>
+  <div class="bgPic">
+    <main class="container">
+      <!-- title -->
+      <header class="row">
+        <div class="col">
+          <h1>Chord Geni</h1>
         </div>
-        <!-- Dropdown Menu -->
-        <div class='row rootSelector'>
-          <div class="dropdown col">
-            <button class="dropbtn btn  dropdown-toggle" type="button" id=' dropdownMenuButton' data-toggle='dropdown' aria-haspopup="true" aria-expanded='false'>
+      </header>
+      <!-- chord selector/diagram -->
+      <div class="row padbtm">
+        <div class="col left">
+          <div class="row">
+            <h2 class="padbtm center">Root Selector</h2>
+          </div>
+          <!-- Dropdown Menu -->
+          <div class='row rootSelector'>
+            <div class="dropdown col">
+              <button class="dropbtn btn  dropdown-toggle" type="button" id=' dropdownMenuButton' data-toggle='dropdown' aria-haspopup="true" aria-expanded='false'>
               Root
             </button>
-            <div id="myDropdown" class="dropdown-menu col visible dropdown-content" aria-labelledby="dropdownMenuButton">
-              <a class="note dropdown-item" href="#C">C </a>
-              <a class="note dropdown-item" href="#C#">C#/Db</a>
-              <a class="note dropdown-item" href="#D">D</a>
-              <a class="note dropdown-item" href="#D#">D#/Eb</a>
-              <a class="note dropdown-item" href="#E">E</a>
-              <a class="note dropdown-item" href="#F">F</a>
-              <a class="note dropdown-item" href="#F#">F#/Gb</a>
-              <a class="note dropdown-item" href="#G">G</a>
-              <a class="note dropdown-item" href="#G#">G#/Ab</a>
-              <a class="note dropdown-item" href="#A">A</a>
-              <a class="note dropdown-item" href="#A#">A#/Bb</a>
-              <a class="note dropdown-item" href="#B">B</a>
+              <div id="myDropdown" class="dropdown-menu col visible dropdown-content" aria-labelledby="dropdownMenuButton">
+                <a class="note dropdown-item" href="#C">C </a>
+                <a class="note dropdown-item" href="#C#">C#/Db</a>
+                <a class="note dropdown-item" href="#D">D</a>
+                <a class="note dropdown-item" href="#D#">D#/Eb</a>
+                <a class="note dropdown-item" href="#E">E</a>
+                <a class="note dropdown-item" href="#F">F</a>
+                <a class="note dropdown-item" href="#F#">F#/Gb</a>
+                <a class="note dropdown-item" href="#G">G</a>
+                <a class="note dropdown-item" href="#G#">G#/Ab</a>
+                <a class="note dropdown-item" href="#A">A</a>
+                <a class="note dropdown-item" href="#A#">A#/Bb</a>
+                <a class="note dropdown-item" href="#B">B</a>
+              </div>
+            </div>
+            <!-- Chord Root Display -->
+            <div class="rootDisplay col">
+              <div>
+                <p id='selectedChord'></p>
+              </div>
             </div>
           </div>
-          <!-- Chord Root Display -->
-          <div class="rootDisplay col">
-            <div>
-              <p id='selectedChord'></p>
-            </div>
-          </div>
-        </div>
-        <div class='row'>
-          <div class="col rootDisplay">
-            <h2>Chord Type Selector</h2>
-            <ul class="list-inline">
-              <li id='major' class="dropdown-item chord"> Major</li>
-              <li id='minor' class="dropdown-item chord"> Minor</li>
-              <!-- <li class="list-inline-item align-middle">D</li>
+          <div class='row'>
+            <div class="col rootDisplay">
+              <h2>Chord Type Selector</h2>
+              <ul class="list-inline">
+                <li id='major' class="dropdown-item chord"> Major</li>
+                <li id='minor' class="dropdown-item chord"> Minor</li>
+                <!-- <li class="list-inline-item align-middle">D</li>
               <li class="list-inline-item align-middle">D#/ <br> Eb</li>
               <li class="list-inline-item align-middle">E</li>
               <li class="list-inline-item align-middle">F</li>
@@ -67,133 +69,134 @@
               <li class="list-inline-item align-middle">A</li>
               <li class="list-inline-item align-middle">A#/ <br>Bb</li>
               <li class="list-inline-item align-middle">B</li> -->
-            </ul>
+              </ul>
+            </div>
+          </div>
+          <div class="rootDisplay ">
+            <h2>Chord Tones</h2>
+            <p id='displayCT' class="rootDisplay "></p>
           </div>
         </div>
-        <div class="rootDisplay ">
-          <h2>Chord Tones</h2>
-          <p id='displayCT' class="rootDisplay "></p>
+        <!-- Chord diagram  -->
+        <div class="col ">
+          <div class="row ">
+            <div class='center '>
+              <h2> Chord Diagram</h2>
+            </div>
+          </div>
+          <div class="row padUp goRight ">
+            <div class="openNotes">
+              <div class="circle e openNotes" id="ee"></div>
+              <div class="circle b openNotes" id="bb"></div>
+              <div class="circle g openNotes" id="gg"></div>
+              <div class="circle d openNotes" id="dd"></div>
+              <div class="circle a openNotes" id="aa"></div>
+              <div class="circle e openNotes" id="e6e"></div>
+            </div>
+            <!-- Note Circles -->
+            <!-- ids are note names prefaced with the string name. s = sharp Low E has a 6 to differentiate it from high e.  -->
+            <div>
+              <!-- notes on e  -->
+              <div class="circle f" id='ef'></div>
+              <div class="circle f#/gb" id='efs'></div>
+              <div class="circle g" id='eg'></div>
+              <div class="circle g#/ab" id='egs'></div>
+              <!-- <div class="circle a" id='ea'></div> -->
+              <!-- notes on B -->
+              <div class="circle c" id='bc'></div>
+              <div class="circle c#/db" id='bcs'></div>
+              <div class="circle d" id='bd'></div>
+              <div class="circle d#/eb" id='bds'></div>
+              <!-- <div class="circle e" id='be'></div> -->
+              <!-- notes on G -->
+              <div class="circle g#/ab" id='ggs'></div>
+              <div class="circle a" id='ga'></div>
+              <div class="circle a#/bb" id='gas'></div>
+              <div class="circle b" id='gb'></div>
+              <!-- <div class="circle c" id='gc'></div> -->
+              <!-- notes on D -->
+              <div class="circle d#/eb" id='dds'></div>
+              <div class="circle e" id='de'></div>
+              <div class="circle f" id='df'></div>
+              <div class="circle f#/gb" id='dfs'></div>
+              <!-- <div class="circle g" id='dg'></div> -->
+              <!-- notes on A -->
+              <div class="circle a#/bb" id='aas'></div>
+              <div class="circle b" id='ab'></div>
+              <div class="circle c" id='ac'></div>
+              <div class="circle c#/db" id='acs'></div>
+              <!-- <div class="circle d" id='ad'></div> -->
+              <!-- notes on E -->
+              <div class="circle f" id='e6f'></div>
+              <div class="circle f#/gb" id='e6fs'></div>
+              <div class="circle g" id='e6g'></div>
+              <div class="circle g#/ab" id='e6gs'></div>
+              <!-- <div class="circle a" id='e6a'></div> -->
+              <table class="center">
+                <tbody class="fretboard">
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                  </tr>
+
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                  </tr>
+
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+          <!-- Chords You Learned  -->
+          <div class="col justify">
+            <div class="marginUp rootDisplay">
+              <button class="" id="showChord">Generate Chord</button>
+            </div>
+            <div class="rootDisplay">
+              <h2>Chords You Learned</h2>
+              <p id="learned"></p>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- Chord diagram  -->
-      <div class="col ">
-        <div class="row ">
-          <div class='center '>
-            <h2> Chord Diagram</h2>
-          </div>
-        </div>
-        <div class="row padUp goRight ">
-          <div class="openNotes">
-            <div class="circle e openNotes" id="ee"></div>
-            <div class="circle b openNotes" id="bb"></div>
-            <div class="circle g openNotes" id="gg"></div>
-            <div class="circle d openNotes" id="dd"></div>
-            <div class="circle a openNotes" id="aa"></div>
-            <div class="circle e openNotes" id="e6e"></div>
-          </div>
-          <!-- Note Circles -->
-          <!-- ids are note names prefaced with the string name. s = sharp Low E has a 6 to differentiate it from high e.  -->
-          <div>
-            <!-- notes on e  -->
-            <div class="circle f" id='ef'></div>
-            <div class="circle f#/gb" id='efs'></div>
-            <div class="circle g" id='eg'></div>
-            <div class="circle g#/ab" id='egs'></div>
-            <!-- <div class="circle a" id='ea'></div> -->
-            <!-- notes on B -->
-            <div class="circle c" id='bc'></div>
-            <div class="circle c#/db" id='bcs'></div>
-            <div class="circle d" id='bd'></div>
-            <div class="circle d#/eb" id='bds'></div>
-            <!-- <div class="circle e" id='be'></div> -->
-            <!-- notes on G -->
-            <div class="circle g#/ab" id='ggs'></div>
-            <div class="circle a" id='ga'></div>
-            <div class="circle a#/bb" id='gas'></div>
-            <div class="circle b" id='gb'></div>
-            <!-- <div class="circle c" id='gc'></div> -->
-            <!-- notes on D -->
-            <div class="circle d#/eb" id='dds'></div>
-            <div class="circle e" id='de'></div>
-            <div class="circle f" id='df'></div>
-            <div class="circle f#/gb" id='dfs'></div>
-            <!-- <div class="circle g" id='dg'></div> -->
-            <!-- notes on A -->
-            <div class="circle a#/bb" id='aas'></div>
-            <div class="circle b" id='ab'></div>
-            <div class="circle c" id='ac'></div>
-            <div class="circle c#/db" id='acs'></div>
-            <!-- <div class="circle d" id='ad'></div> -->
-            <!-- notes on E -->
-            <div class="circle f" id='e6f'></div>
-            <div class="circle f#/gb" id='e6fs'></div>
-            <div class="circle g" id='e6g'></div>
-            <div class="circle g#/ab" id='e6gs'></div>
-            <!-- <div class="circle a" id='e6a'></div> -->
-            <table class="center">
-              <tbody class="fretboard">
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-
-                </tr>
-
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-
-                </tr>
-
-              </tbody>
-            </table>
-
-          </div>
-        </div>
-        <div class="row">
-          <div class="center ">
-            <button class="marginUp center" id="showChord">Generate Chord</button>
-          </div>
-          <div class="center">
-            <h2>Chords You Learned</h2>
-            <p id="learned"></p>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
-  </main>
-
+    </main>
+  </div>
 
 
 
