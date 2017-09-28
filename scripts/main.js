@@ -1,8 +1,11 @@
 //*********   Populate picked root and chord type  ***************
+var learned = document.getElementById('learned')
 var root = document.getElementsByClassName('note')
 var displaySelectedChord = document.getElementById('selectedChord')
 var selectedRoot = ''
 var selectedChordType
+
+renderLearnedChords()
 
 for (var i = 0; i < root.length; i++) {
   root[i].addEventListener('click', function(event) {
@@ -77,46 +80,48 @@ function minorChord(alph) {
 //*************  Chord Tone Display Button  ********
 var lowerCaseCT = chordTones.join('')
 var noteCircle = document.getElementsByClassName('circle')
-var learned = document.getElementById('learned')
+
 var showChord = document.getElementById('showChord')
 
 showChord.addEventListener('click', function() {
 
-  for (var i = 0; i < noteCircle.length; i++) {
+  for (let i = 0; i < noteCircle.length; i++) {
     noteCircle[i].style.visibility = 'hidden'
   }
 
   // populate major chord diagram
 
-  for (var i = 0; i < chordTones.length; i++) {
-    for (var j = 0; j < noteCircle.length; j++) {
+  for (let i = 0; i < chordTones.length; i++) {
+    for (let j = 0; j < noteCircle.length; j++) {
 
       if (noteCircle[j].classList[1] === chordTones[i]) {
         noteCircle[j].style.visibility = 'visible'
       }
     }
   }
+
   // check to see if chords been added to local storage
   var chord = displaySelectedChord.innerText
   var storageLength = localStorage.length
-
   localStorage.setItem(storageLength, chord)
 
-  //  learned.innerHTML = chord
-  // for (var i = 0; i < array.length; i++) {
-  //   array[i]
-  // }
-  // for (localStorage in chord) {
-  //   console.log(chord)
-  //   learned.innerHTML += chord
-  // }
   for (let v = 0; v < storageLength; v++) {
-    if (!learned.innerHTML.includes(localStorage.getItem(v)))
+    if (!learned.innerHTML.includes(localStorage.getItem(v))) {
       learned.innerHTML += " " + localStorage.getItem(v)
+    }
   }
-
-
+  renderLearnedChords();
 })
 //***** Chords you've learned so far**********
 
-// console.log(localStorage.getItem("learned")) console.log(localStorage.length);
+
+function renderLearnedChords() {
+  var chord = displaySelectedChord.innerText
+  var storageLength = localStorage.length
+  localStorage.setItem(storageLength, chord)
+  for (let v = 0; v < storageLength; v++) {
+    if (!learned.innerHTML.includes(localStorage.getItem(v))) {
+      learned.innerHTML += " " + localStorage.getItem(v)
+    }
+  }
+}
