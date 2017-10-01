@@ -7,7 +7,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/main.css">
   <link rel="shortcut icon" href="assets/guitar.png" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
   <script defer src="scripts/main.js" charset="utf-8"></script>
+  <script defer src="scripts/hearChord.js" charset="utf-8"></script>
+
 </head>
 
 <body>
@@ -22,7 +26,7 @@
       <!-- chord selector/diagram -->
       <div class="row padbtm">
         <div class="col left">
-          <div class="row">
+          <div class="row ">
             <h2 class="padbtm ">Root Selector</h2>
           </div>
           <!-- Dropdown Menu -->
@@ -65,7 +69,7 @@
           </div>
           <div class="rootDisplay ">
             <h2>Chord Tones</h2>
-            <p id='displayCT' class="rootDisplay "></p>
+            <p id='displayCT' class=" "></p>
           </div>
         </div>
         <!-- Chord diagram  -->
@@ -75,6 +79,7 @@
               <h2> Chord Diagram</h2>
             </div>
           </div>
+
           <!-- Open Note Circles -->
           <div class="row  goRight padUp">
             <div class="openNotes">
@@ -177,6 +182,79 @@
           <div class="col justify">
             <div class="marginUp rootDisplay">
               <button class="btn" id="showChord">Generate Chord</button>
+              <button class="btn" id="listen">Play Chord</button>
+              <!-- audio files for chords -->
+              <audio id="amaj" src="assets/converted/amaj.mp3"></audio>
+              <audio id="adom7" src="assets/converted/adom7.mp3"></audio>
+              <audio id="amaj7" src="assets/converted/amaj7.mp3"></audio>
+              <audio id="amin" src="assets/converted/amin.mp3"></audio>
+              <audio id="amin7" src="assets/converted/amin7.mp3"></audio>
+
+              <audio id="asmaj" src="assets/converted/asmaj.mp3"></audio>
+              <audio id="asmaj7" src="assets/converted/asmaj7.mp3"></audio>
+              <audio id="asmin" src="assets/converted/asmin.mp3"></audio>
+              <audio id="asmin7" src="assets/converted/asmin7.mp3"></audio>
+
+              <audio id="bmaj" src="assets/converted/bmaj.mp3"></audio>
+              <audio id="bmaj7" src="assets/converted/bmaj7.mp3"></audio>
+              <audio id="bmin" src="assets/converted/bmin.mp3"></audio>
+              <audio id="bmin7" src="assets/converted/bmin7.mp3"></audio>
+
+              <audio id="cmaj" src="assets/converted/cmaj.mp3"></audio>
+              <audio id="cdom7" src="assets/converted/cdom7.mp3"></audio>
+              <audio id="cmaj7" src="assets/converted/cmaj7.mp3"></audio>
+              <audio id="cmin" src="assets/converted/cmin.mp3"></audio>
+              <audio id="cmin7" src="assets/converted/cmin7.mp3"></audio>
+
+              <audio id="csmaj" src="assets/converted/csmaj.mp3"></audio>
+              <audio id="csdom7" src="assets/converted/csdom7.mp3"></audio>
+              <audio id="csmaj7" src="assets/converted/csmaj7.mp3"></audio>
+              <audio id="csmin" src="assets/converted/csmin.mp3"></audio>
+              <audio id="csmin7" src="assets/converted/csmin7.mp3"></audio>
+
+              <audio id="dmaj" src="assets/converted/dmaj.mp3"></audio>
+              <audio id="ddom7" src="assets/converted/ddom7.mp3"></audio>
+              <audio id="dmaj7" src="assets/converted/dmaj7.mp3"></audio>
+              <audio id="dmin" src="assets/converted/dmin.mp3"></audio>
+              <audio id="dmin7" src="assets/converted/dmin7.mp3"></audio>
+
+              <audio id="dsmaj" src="assets/converted/dsmaj.mp3"></audio>
+              <audio id="dsdom7" src="assets/converted/dsdom7.mp3"></audio>
+              <audio id="dsmaj7" src="assets/converted/dsmaj7.mp3"></audio>
+              <audio id="dsmin" src="assets/converted/dsmin.mp3"></audio>
+              <audio id="dsmin7" src="assets/converted/dsmin7.mp3"></audio>
+
+              <audio id="emaj" src="assets/converted/emaj.mp3"></audio>
+              <audio id="edom7" src="assets/converted/edom7.mp3"></audio>
+              <audio id="emaj7" src="assets/converted/emaj7.mp3"></audio>
+              <audio id="emin" src="assets/converted/emin.mp3"></audio>
+              <audio id="emin7" src="assets/converted/emin7.mp3"></audio>
+
+              <audio id="fmaj" src="assets/converted/fmaj.mp3"></audio>
+              <audio id="fdom7" src="assets/converted/fdom7.mp3"></audio>
+              <audio id="fmaj7" src="assets/converted/fmaj7.mp3"></audio>
+              <audio id="fmin" src="assets/converted/fmin.mp3"></audio>
+              <audio id="fmin7" src="assets/converted/fmin7.mp3"></audio>
+
+              <audio id="fsmaj" src="assets/converted/fsmaj.mp3"></audio>
+              <audio id="fsdom7" src="assets/converted/fsdom7.mp3"></audio>
+              <audio id="fsmaj7" src="assets/converted/fsmaj7.mp3"></audio>
+              <audio id="fsmin" src="assets/converted/fsmin.mp3"></audio>
+              <audio id="fsmin7" src="assets/converted/fsmin7.mp3"></audio>
+
+              <audio id="gmaj" src="assets/converted/gmaj.mp3"></audio>
+              <audio id="gdom7" src="assets/converted/gdom7.mp3"></audio>
+              <audio id="gmaj7" src="assets/converted/gmaj7.mp3"></audio>
+              <audio id="gmin" src="assets/converted/gmin.mp3"></audio>
+              <audio id="gmin7" src="assets/converted/gmin7.mp3"></audio>
+
+              <audio id="gsmaj" src="assets/converted/gsmaj.mp3"></audio>
+              <audio id="gsdom7" src="assets/converted/gsdom7.mp3"></audio>
+              <audio id="gsmaj7" src="assets/converted/gsmaj7.mp3"></audio>
+              <audio id="gsmin" src="assets/converted/gsmin.mp3"></audio>
+              <audio id="gsmin7" src="assets/converted/gsmin7.mp3"></audio>
+
+
             </div>
             <div class="rootDisplay">
               <h2>Chords You Learned</h2>
