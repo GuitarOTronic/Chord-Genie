@@ -36,11 +36,21 @@ h2{
   line-height: 1.3rem;
 
   font-family: "Raleway", monospace;
-
 }
+a{
+  font-style: normal;
+  color: black;
+}
+
 .goLeft{
   display: flex;
   justify-content: flex-start;
+}
+.floatLeft{
+  float: left;
+}
+.floatRight{
+  float:right;
 }
 .goRight{
   display: flex;
@@ -69,6 +79,17 @@ h2{
   margin-bottom: 1rem;
   border-radius: 5px;
   background: rgba(132, 147, 116, .2);
+}
+.gameChoices{
+    text-align: left;
+    padding: .5rem;
+    padding-left: 3rem;
+    border: 1px solid #9899A6;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    border-radius: 5px;
+    background: rgba(132, 147, 116, .2);
+
 }
 #selectedChord{
   font-size: 2rem;
@@ -167,6 +188,8 @@ button{
     width: 40px;
     height: 40px;
 }
+
+
 /********   open notes**********/
 .openNotes{
 
