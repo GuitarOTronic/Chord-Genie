@@ -17,12 +17,12 @@ var randomIndex
 var randomNum = function() {
   min = 0;
   max = Object.keys(audioObject).length;
-  randomIndex = Math.floor(Math.random() * (max - min + 1)) + min;
+  randomIndex = Math.floor(Math.random() * (max));
 }
 
 var answer
 
-//checks for type of chord
+//checks for type of chord and sets answer
 var randomChordType = function() {
   if (Object.keys(audioObject)[randomIndex].includes('s')) {
     answer = Object.keys(audioObject)[randomIndex].slice(2)
@@ -51,6 +51,7 @@ playChord.addEventListener('click', function() {
   getChordAudio.play()
 })
 var count = 0
+var answered = false;
 var response = document.getElementById('response')
 //check for correct answer
 var userAnswer = document.getElementById('gameChoicesForm')
@@ -61,6 +62,7 @@ userAnswer.addEventListener('submit', function(event) {
     response.innerText = 'You are Correct! Move on to the next chord!'
     randomIndex = undefined;
     count++
+    answered = true
     document.getElementById('currentStreak').innerText = count;
   } else if (document.getElementById('min').checked && answer === 'min') {
     response.innerText = 'You are Correct! Move on to the next chord!'
@@ -71,24 +73,29 @@ userAnswer.addEventListener('submit', function(event) {
     response.innerText = 'You are Correct! Move on to the next chord!'
     randomIndex = undefined;
     count++
+    answered = true
     document.getElementById('currentStreak').innerText = count;
   } else if (document.getElementById('dom7').checked && answer === 'dom7') {
     response.innerText = 'You are Correct! Move on to the next chord!'
     randomIndex = undefined;
     count++
+    answered = true
     document.getElementById('currentStreak').innerText = count;
   } else if (document.getElementById('maj7').checked && answer === 'maj7') {
     response.innerText = 'You are Correct! Move on to the next chord!'
     randomIndex = undefined;
     count++
+    answered = true
     document.getElementById('currentStreak').innerText = count;
   } else {
     response.innerText = 'WRONG'
     count = 0
     document.getElementById('currentStreak').innerText = count;
   }
-
-  if (answer === userAnswer.value) {
-
+  if (answered === true) {
+    answered = false;
+    randomNum()
+    randomChordType()
   }
+
 })
