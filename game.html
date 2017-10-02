@@ -18,43 +18,49 @@
   <!-- Chord selection -->
   <div class="container d-flex">
 
-    <button class="button" id="listenGame">Play Chord</button>
+    <button class="button" id="playChord">Play Chord</button>
     <!-- form -->
     <div class="center col-5 gameChoices">
-      <p> What type of chord do you hear?</p>
-      <div class="form-check">
-        <label class="form-check-label">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="maj">
-      Major
-    </label>
-      </div>
-      <div class="form-check">
-        <label class="form-check-label">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="min">
-      Minor
-    </label>
-      </div>
-      <div class="form-check">
-        <label class="form-check-label">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="min7">
-      Minor 7th
-    </label>
-      </div>
-      <div class="form-check">
-        <label class="form-check-label">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="dom7">
-      Dominent 7th
-    </label>
-      </div>
-      <div class="form-check">
-        <label class="form-check-label">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="maj7">
-      Major 7th
-    </label>
-      </div>
+      <form id="gameChoicesForm">
+        <p> What type of chord do you hear?</p>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" id = 'maj'name="chordAnswer"  value="maj">
+            Major
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" id = 'min'name="chordAnswer"  value="min">
+            Minor
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" id = 'min7' name="chordAnswer"  value="min7">
+            Minor 7th
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" id = 'dom7'name="chordAnswer"  value="dom7">
+            Dominent 7th
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" id = 'maj7'name="chordAnswer"  value="maj7">
+            Major 7th
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </div>
+    <div class="gameResponse">
+      <p id="response"></p>
+      <div>
+
+      </div>
 
 
 </body>
