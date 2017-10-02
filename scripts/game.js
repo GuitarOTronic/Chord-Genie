@@ -50,7 +50,7 @@ playChord.addEventListener('click', function() {
   getChordAudio.src = audioObject[Object.keys(audioObject)[randomIndex]]
   getChordAudio.play()
 })
-
+var count = 0
 var response = document.getElementById('response')
 //check for correct answer
 var userAnswer = document.getElementById('gameChoicesForm')
@@ -60,21 +60,33 @@ userAnswer.addEventListener('submit', function(event) {
   if (document.getElementById('maj').checked && answer === 'maj') {
     response.innerText = 'You are Correct! Move on to the next chord!'
     randomIndex = undefined;
+    count++
+    document.getElementById('currentStreak').innerText = count;
   } else if (document.getElementById('min').checked && answer === 'min') {
     response.innerText = 'You are Correct! Move on to the next chord!'
     randomIndex = undefined;
+    count++
+    document.getElementById('currentStreak').innerText = count;
   } else if (document.getElementById('min7').checked && answer === 'min7') {
     response.innerText = 'You are Correct! Move on to the next chord!'
     randomIndex = undefined;
+    count++
+    document.getElementById('currentStreak').innerText = count;
   } else if (document.getElementById('dom7').checked && answer === 'dom7') {
     response.innerText = 'You are Correct! Move on to the next chord!'
     randomIndex = undefined;
+    count++
+    document.getElementById('currentStreak').innerText = count;
   } else if (document.getElementById('maj7').checked && answer === 'maj7') {
     response.innerText = 'You are Correct! Move on to the next chord!'
     randomIndex = undefined;
-  } else(
+    count++
+    document.getElementById('currentStreak').innerText = count;
+  } else {
     response.innerText = 'WRONG'
-  )
+    count = 0
+    document.getElementById('currentStreak').innerText = count;
+  }
 
   if (answer === userAnswer.value) {
 
