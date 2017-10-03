@@ -100,14 +100,16 @@ showChord.addEventListener('click', function() {
     }
   }
 
-  // check to see if chords been added to local storage
+  //******* Might need this?
+  //check to see if chords been added to local storage
   var chord = displaySelectedChord.innerText
   var storageLength = localStorage.length
   localStorage.setItem(storageLength, chord)
 
   for (let v = 0; v < storageLength; v++) {
-    if (!learned.innerHTML.includes(localStorage.getItem(v))) {
+    if (localStorage.getItem(v) !== null && !learned.innerHTML.includes(localStorage.getItem(v))) {
       learned.innerHTML += " " + localStorage.getItem(v)
+
     }
   }
   renderLearnedChords();
@@ -122,7 +124,7 @@ function renderLearnedChords() {
   var storageLength = localStorage.length
   localStorage.setItem(storageLength, chord)
   for (let v = 0; v < storageLength; v++) {
-    if (!learned.innerHTML.includes(localStorage.getItem(v))) {
+    if (!learned.innerHTML.includes(localStorage.getItem(v)) && localStorage.getItem(v) !== null) {
       learned.innerHTML += "<br> - " + localStorage.getItem(v)
     }
   }
