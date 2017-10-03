@@ -116,9 +116,7 @@ showChord.addEventListener('click', function() {
 })
 //***** Chords you've learned so far**********
 
-//************************************
-//*** fix chords learned null bug  ***  \m/
-//************************************
+
 function renderLearnedChords() {
   var chord = displaySelectedChord.innerText
   var storageLength = localStorage.length
