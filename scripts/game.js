@@ -105,9 +105,13 @@ userAnswer.addEventListener('submit', function(event) {
     answered = false;
     randomNum()
     randomChordType()
+    var bestStreak = document.getElementById('bestStreak')
 
     playChord.className += ' btn-success'
-    console.log(playChord.className);
+
+
+
+
   }
 
 })

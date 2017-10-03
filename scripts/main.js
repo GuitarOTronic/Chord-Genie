@@ -121,7 +121,7 @@ function renderLearnedChords() {
   localStorage.setItem(storageLength, chord)
   for (let v = 0; v < storageLength; v++) {
     if (!learned.innerHTML.includes(localStorage.getItem(v))) {
-      learned.innerHTML += "<br>- " + localStorage.getItem(v)
+      learned.innerHTML += "<br> - " + localStorage.getItem(v)
     }
   }
 }
