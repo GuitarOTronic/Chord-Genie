@@ -38,7 +38,10 @@ var randomChordType = function() {
 //plays quiz chord.
 //gets chord from the randomIndex
 playChord.addEventListener('click', function() {
-
+  console.log(playChord.classList);
+  if (playChord.classList.contains('btn-success')) {
+    playChord.classList.remove('btn-success')
+  }
   if (randomIndex === undefined) {
     randomNum()
     randomChordType()
@@ -64,29 +67,35 @@ userAnswer.addEventListener('submit', function(event) {
     count++
     answered = true
     document.getElementById('currentStreak').innerText = count;
+    document.getElementById('maj').checked = false
   } else if (document.getElementById('min').checked && answer === 'min') {
     response.innerText = 'You are Correct! Move on to the next chord!'
     randomIndex = undefined;
     count++
+    answered = true
     document.getElementById('currentStreak').innerText = count;
+    document.getElementById('min').checked = false
   } else if (document.getElementById('min7').checked && answer === 'min7') {
     response.innerText = 'You are Correct! Move on to the next chord!'
     randomIndex = undefined;
     count++
     answered = true
     document.getElementById('currentStreak').innerText = count;
+    document.getElementById('min7').checked = false
   } else if (document.getElementById('dom7').checked && answer === 'dom7') {
     response.innerText = 'You are Correct! Move on to the next chord!'
     randomIndex = undefined;
     count++
     answered = true
     document.getElementById('currentStreak').innerText = count;
+    document.getElementById('dom7').checked = false
   } else if (document.getElementById('maj7').checked && answer === 'maj7') {
     response.innerText = 'You are Correct! Move on to the next chord!'
     randomIndex = undefined;
     count++
     answered = true
     document.getElementById('currentStreak').innerText = count;
+    document.getElementById('maj7').checked = false
   } else {
     response.innerText = 'WRONG'
     count = 0
@@ -96,6 +105,9 @@ userAnswer.addEventListener('submit', function(event) {
     answered = false;
     randomNum()
     randomChordType()
+
+    playChord.className += ' btn-success'
+    console.log(playChord.className);
   }
 
 })
