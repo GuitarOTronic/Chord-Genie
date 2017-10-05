@@ -43,7 +43,9 @@ function findIndexOfRoot(root) {
 var majChord = document.getElementById('major')
 
 majChord.addEventListener('click', function() {
+  displayCT.innerText = majorChord(alphabet)
   majorChord(alphabet)
+
 })
 
 function majorChord(alph) {
@@ -55,7 +57,7 @@ function majorChord(alph) {
   chordTones.push(alph[indexOfRoot + 4].toLowerCase())
   chordTones.push(alph[indexOfRoot + 7].toLowerCase())
 
-  displayCT.innerText = chordTones.join('-').toUpperCase()
+  return chordTones.join('-').toUpperCase()
 
 }
 //*************   Minor Chord    *******************
